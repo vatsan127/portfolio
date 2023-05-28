@@ -9,7 +9,7 @@
 const profiles = [
   {
     id: 1,
-    img: "./img/naruto",
+    img: "./img/naruto.webp",
     name: "Naruto",
     level: "Genin",
     des: "Naruto Uzumaki is a spirited ninja from the Hidden Leaf Village, determined to become the Hokage, while facing challenges, forming bonds, and mastering powerful techniques on his journey.",
@@ -17,7 +17,7 @@ const profiles = [
   },
   {
     id: 2,
-    img: "",
+    img: "./img/sasuke.jpg",
     name: "Sasuke ",
     level: "Genin",
     des: "Sasuke Uchiha, a complex character from the Naruto series, is driven by revenge and seeks power to avenge his clan. He undergoes personal growth, battles inner demons, and ultimately finds redemption.",
@@ -25,7 +25,7 @@ const profiles = [
   },
   {
     id: 3,
-    img: "",
+    img: "./img/sakura.png",
     name: "Sakura",
     level: "Jonin",
     des: "Sakura Haruno is a ninja from the Naruto series. Initially weak, she trains diligently and becomes a strong kunoichi, known for her intelligence, medical abilities, and unwavering loyalty to her friends.",
@@ -33,7 +33,8 @@ const profiles = [
   },
   {
     id: 4,
-    img: "",
+    img: "./img/kakashi.webp",
+
     name: "Kakashi",
     level: "Jonin",
     des: "Kakashi Hatake, a skilled shinobi from the Naruto series, is known for his mysterious nature, Sharingan eye, excellence in combat, and being a mentor to Team 7.",
@@ -41,7 +42,7 @@ const profiles = [
   },
   {
     id: 5,
-    img: "",
+    img: "./img/jiraya.jpg",
     name: "Jiraya",
     level: "Sanin",
     des: "Jiraiya, a legendary shinobi from the Hidden-Leaf Village, was a wise and powerful teacher, known for his eccentricity, mastery of the toad-based fighting style, and his impact on Naruto's growth.",
@@ -52,19 +53,43 @@ const profiles = [
 const btnNext = document.getElementById("btn-next");
 const btnPrev = document.getElementById("btn-prev");
 
-const profileImg = document.getElementById("profile-img");
-const profileName = document.getElementById("profile-name");
-const profileLevel = document.getElementById("profile-level");
-const prpofileDes = document.getElementById("profile-des");
+const profileImg = document.querySelector(".profile-img");
+const profileName = document.querySelector(".profile-name");
+const profileLevel = document.querySelector(".profile-level");
+const prpofileDes = document.querySelector(".profile-des");
 
 console.log("profiles length ", profiles.length);
+
+let counter = 0;
+
+window.addEventListener("DOMContentLoaded", function () {
+  showPerson(counter);
+});
+
 btnNext.addEventListener("click", function () {
-  let counter = 0;
   if (counter < profiles.length - 1) {
     counter++;
   } else {
     counter = 0;
   }
   console.log("counter ", counter);
-  profileImg.img = profileImg;
+  showPerson(counter);
 });
+
+btnPrev.addEventListener("click", function () {
+  if (counter > 0) {
+    counter--;
+  } else {
+    counter = 4;
+  }
+  console.log("counter ", counter);
+  showPerson(counter);
+});
+
+function showPerson(counter) {
+  const profile = profiles[counter];
+  profileImg.src = profile.img;
+  profileName.textContent = profile.name;
+  profileLevel.textContent = profile.level;
+  prpofileDes.textContent = profile.des;
+}
