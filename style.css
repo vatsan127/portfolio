@@ -1,7 +1,3 @@
-body {
-  background-color: #66f4d3;
-}
-
 img {
   height: 150px;
   width: 150px;
@@ -11,12 +7,4 @@ img {
 .content {
   background: white;
   border-radius: 10px;
-}
-
-.content-area {
-}
-
-.cotent-container {
-  height: 10vh;
-  width: 100px;
 }

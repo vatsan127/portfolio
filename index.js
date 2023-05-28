@@ -21,13 +21,13 @@ const profiles = [
     name: "Sasuke ",
     level: "Genin",
     des: "Sasuke Uchiha, a complex character from the Naruto series, is driven by revenge and seeks power to avenge his clan. He undergoes personal growth, battles inner demons, and ultimately finds redemption.",
-    bgColor: "pruple",
+    bgColor: "#5E32F9",
   },
   {
     id: 3,
     img: "./img/sakura.png",
     name: "Sakura",
-    level: "Jonin",
+    level: "Genin",
     des: "Sakura Haruno is a ninja from the Naruto series. Initially weak, she trains diligently and becomes a strong kunoichi, known for her intelligence, medical abilities, and unwavering loyalty to her friends.",
     bgColor: "pink",
   },
@@ -92,4 +92,5 @@ function showPerson(counter) {
   profileName.textContent = profile.name;
   profileLevel.textContent = profile.level;
   prpofileDes.textContent = profile.des;
+  document.body.style.backgroundColor = profile.bgColor;
 }
