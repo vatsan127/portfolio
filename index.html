@@ -3,20 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CharacterPortfolio</title>
+    <link rel="icon" type="svg" href="./img/javascript.svg" />
+    <title>Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- navbar -->
+    <div class="navbar shadow navbar-light bg-light">
+      <div class="container">
+        <a href="#" class="navbar-brand"> Portfolio </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:vatsan127@gmail.com">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- main -->
+    <main>
+      <div
+        class="container d-flex flex-row justify-content-center align-items-center"
+        style="height: 90vh"
+      >
+        <div
+          class="content d-flex flex-column justify-content-center align-items-center"
+        >
+          <!-- img
+            name
+            level
+            des
+            prev next buttons
+               -->
+          <img
+            class="profile-img border border-5"
+            src="./img/naruto.webp"
+            alt=""
+          />
+          <p class="profile-name h3">Naruto</p>
+          <p class="profile-level text-muted h6">Genin</p>
+          <p class="profile-des text-center">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, rem?
+            Ab hic numquam nesciunt quos aliquam ex veniam commodi porro alias
+            vitae eos sit corrupti delectus distinctio, accusamus iusto
+            reprehenderit?
+          </p>
+          <div class="button-container">
+            <button class="btn btn-primary btn-prev me-3">
+              <i class="fa-solid fa-caret-left"></i>
+            </button>
+            <!-- <p class="d-inline">page</p> -->
+            <button class="btn btn-primary btn-next">
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/d494538c58.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
